@@ -468,7 +468,7 @@ The system demonstrates how traditional application logic, cloud persistence, le
 ## 👨‍💻 Author
 
 **Abhijith Shetty**  
-*AI & Machine Learning Student | Android & AI Developer*
+*AI & Machine Learning Student | Android & AI Developer *
 
 > "Building intelligent applications that turn learning into measurable progress and career preparation."
 
