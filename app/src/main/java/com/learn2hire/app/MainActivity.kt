@@ -3,45 +3,51 @@ package com.learn2hire.app
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import com.learn2hire.app.ui.Learn2HireApp
 import com.learn2hire.app.ui.theme.Learn2HireTheme
+import com.learn2hire.app.ui.theme.ThemeMode
+import com.learn2hire.app.ui.theme.ThemePreferences
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+
+    private lateinit var themePreferences:
+            ThemePreferences
+
+    private var themeMode by
+    mutableStateOf(ThemeMode.SYSTEM)
+
+    override fun onCreate(
+        savedInstanceState: Bundle?
+    ) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
+        themePreferences =
+            ThemePreferences(this)
+
+        themeMode =
+            themePreferences.getThemeMode()
+
         setContent {
-            Learn2HireTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
+            Learn2HireTheme(
+                themeMode = themeMode
+            ) {
+
+                Learn2HireApp(
+                    themeMode = themeMode,
+
+                    onThemeModeChange = { newMode ->
+
+                        themeMode = newMode
+
+                        themePreferences
+                            .saveThemeMode(newMode)
+                    }
+                )
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Learn2HireTheme {
-        Greeting("Android")
     }
 }

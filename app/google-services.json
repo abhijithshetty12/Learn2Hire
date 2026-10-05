@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "401146363144",
+    "project_id": "learn2hire-app",
+    "storage_bucket": "learn2hire-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401146363144:android:c9c70f15d5053c38dc80bd",
+        "android_client_info": {
+          "package_name": "com.learn2hire.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401146363144-k34h8iahnjhs7gf68dfpi8jfppt5scme.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.learn2hire.app",
+            "certificate_hash": "73559943c9b9b06094d127b7605fcaea5e803af7"
+          }
+        },
+        {
+          "client_id": "401146363144-qfc33l6kkoq61k6qd6tb51eup98n5g4j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.learn2hire.app",
+            "certificate_hash": "e9ed449333a02e05f529f1e2bcbfc9ddef598295"
+          }
+        },
+        {
+          "client_id": "401146363144-fe7i2cbtrh5apbisuv0cpekmooia9tv2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-dA9R9sG8rjhzn1WO6Wnjjt6OSFm1BHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401146363144-fe7i2cbtrh5apbisuv0cpekmooia9tv2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
